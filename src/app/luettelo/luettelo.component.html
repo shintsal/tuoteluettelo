@@ -1,0 +1,26 @@
+<section class="parent">
+
+    <div class="toiminnot">
+        <label>search:</label>
+        <input type="text" [(ngModel)]="term">
+        <br>
+        <label>sort by:</label>
+        <select (change)="selectChange($event)">
+            <option value="age">Newest</option>
+            <option value="name">Alphabetical</option>
+        </select>
+    </div>
+    <section class="tuotteet">
+        <div class="tuote" *ngFor="let phone of phones | filter:term | orderBy:order">
+            <div>
+                <figure>
+                    <img src="/assets/{{phone.imageUrl}}" alt="">
+                </figure>
+            </div>
+            <div>
+                <h3><a routerLink='/tiedot' routerLinkActive="true">{{phone.name}}</a></h3>
+                <p>{{phone.snippet}}</p>
+            </div>
+        </div>
+    </section>
+</section>
