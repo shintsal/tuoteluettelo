@@ -12,6 +12,7 @@
     </div>
     <section class="tuotteet">
         <div class="tuote" *ngFor="let phone of phones | filter:term | orderBy:order">
+            <a routerLink="{{ phone.id }}">
             <div>
                 <figure>
                     <img src="/assets/{{phone.imageUrl}}" alt="">
@@ -21,6 +22,7 @@
                 <h3><a routerLink='/tiedot' routerLinkActive="true">{{phone.name}}</a></h3>
                 <p>{{phone.snippet}}</p>
             </div>
+            </a>
         </div>
     </section>
 </section>

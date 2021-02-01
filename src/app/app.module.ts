@@ -9,6 +9,7 @@ import { LuetteloComponent } from './luettelo/luettelo.component';
 import { TuotetiedotComponent } from './tuotetiedot/tuotetiedot.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OrderModule } from 'ngx-order-pipe';
     AppRoutingModule,
     FormsModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
     OrderModule,
     RouterModule.forRoot([
       { path: '', component: LuetteloComponent },

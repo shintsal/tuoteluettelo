@@ -21,9 +21,6 @@ input, select {
 }
 
 .tuote{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; 
     width: 70rem;
     border: solid lightgray 1px;
     border-radius: 5px;
@@ -46,6 +43,9 @@ img {
 }
 
 a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
     color: #77b2f7;
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
