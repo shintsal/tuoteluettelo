@@ -1,1 +1,54 @@
-<p>tuotetiedot works!</p>
+<section class="parent">
+    <section class="top">
+        <div class="isokuva"></div>
+        <figure>
+            <img src="/assets/img/phones/{{ phone.id }}.0.jpg" alt="">
+        </figure>
+        <div>
+            <div class="description">
+                <h3>{{ phone.name }}</h3>
+                <p>{{ phone.description }}</p>
+            </div>
+            <div class="pikkukuvat">
+                <figure class="frame" *ngFor="let image of phone.images">
+                    <img class="minikuvat" src="{{ '/assets/' + image }}" alt="">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="bottom">
+        <div class="osat">
+            <h5>Availability and Networks</h5>
+            <h6>Availability</h6>
+            <p class="info"></p>
+        </div>
+        <div class="osat">
+            <h5>Battery</h5>
+            <h6>Type</h6>
+            <p class="info">{{ phone.battery.type }}</p>
+            <h6>Talk Time</h6>
+            <p class="info">{{ phone.battery.talkTime }}</p>
+            <h6>Standby time (max)</h6>
+            <p class="info">{{ phone.battery.standbyTime }}</p>
+        </div>
+        <div class="osat">
+            <h5>Storage and Memory</h5>
+            <h6>RAM</h6>
+            <p class="info">{{ phone.storage.ram }}</p>
+            <h6>Flash</h6>
+            <p class="info">{{ phone.storage.flash }}</p>
+        </div>
+        <div class="osat">
+            <h5>Connectivity</h5>
+            <h6>Network Support</h6>
+            <h6>WiFi</h6>
+            <p class="info">{{ phone.connectivity.wifi }}</p>
+            <h6>Bluetooth</h6>
+            <p class="info">{{ phone.connectivity.bluetooth }}</p>
+            <h6>Infrared</h6>
+            <p class="info">{{ phone.connectivity.infrared }}</p>
+            <h6>GPS</h6>
+            <p class="info">{{ phone.connectivity.gps }}</p>
+        </div>
+    </section>
+</section>

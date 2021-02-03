@@ -27,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       { path: '', redirectTo: '/luettelo', pathMatch: 'full' },
       { path: 'luettelo', component: LuetteloComponent },
-      { path: 'tiedot', component: TuotetiedotComponent }
+      { path: 'luettelo/:tiedot', component: TuotetiedotComponent }
     ])
   ],
   providers: [],
