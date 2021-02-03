@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { phones } from '../phones';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./luettelo.component.css']
 })
 export class LuetteloComponent implements OnInit {
-  phones = phones;
+  phones: any[];
   term;
   order: string = '';
   
